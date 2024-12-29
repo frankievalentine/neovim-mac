@@ -12,6 +12,7 @@ brew "findutils"
 tap 'homebrew/bundle'
 tap 'mongodb/brew'
 tap 'buo/cask-upgrade'
+tap 'shaunsingh/SFMono-Nerd-Font-Ligaturized'
 
 # Install other necessary binaries.
 brew "grep"
@@ -21,9 +22,13 @@ brew "openssh"
 brew "wget"
 brew "ruby"
 brew "zsh"
+brew "zsh-syntax-highlighting"
+brew "zsh-autosuggestions"
 brew "bash"
 brew "bash-completion"
+brew "stow"
 brew "neovim"
+brew "fzf"
 brew "lazygit"
 brew "btop"
 brew "bottom"
@@ -83,8 +88,9 @@ cask "font-ia-writer-quattro"
 cask "font-league-gothic"
 cask "font-rambla"
 cask "font-share-tech"
-cask "font-3270-nerd-font"
 cask "font-ibm-plex-mono"
+cask "font-sf-mono-nerd-font-ligaturized"
+cask "font-3270-nerd-font"
 cask "font-fira-mono-nerd-font"
 cask "font-inconsolata-go-nerd-font"
 cask "font-inconsolata-lgc-nerd-font"

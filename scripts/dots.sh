@@ -65,18 +65,6 @@ echo "------------------------------"
 echo ""
 exec -l $SHELL
 
- # Make apps persistent on the dock
-echo "Making sure script is executable"
-echo "------------------------------"
-echo ""
-chmod +x ./scripts/apps.sh
-echo ""
-echo "------------------------------"
-echo "Executing"
-echo "------------------------------"
-echo ""
-./scripts/apps.sh
-
 # Finished
 echo "------------------------------"
 echo "------------------------------"
