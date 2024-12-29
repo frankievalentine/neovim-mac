@@ -19,6 +19,9 @@ export PATH="/usr/local/sbin:$PATH"
 # brew libpq in PATH
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
+# brew in PATH
+export PATH="/opt/homebrew/bin:/bin:/usr/bin"
+
 # 1Password-cli shell completion
 eval "$(op completion zsh)"; compdef _op op
 

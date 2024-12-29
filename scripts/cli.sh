@@ -12,6 +12,9 @@ update
 # Install ohmyzsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
+# Install tpm
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+
 # Install fnm node version manager
 brew install fnm
 eval "$(fnm env --use-on-cd)"

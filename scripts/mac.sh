@@ -3,7 +3,7 @@
 ##############################################################
 # General System                                                       
 ##############################################################
-# Set computer name (as done via System Preferences → Sharing)
+# Set computer name (as done via System Settings → General → Sharing)
 sudo scutil --set ComputerName "Frankie's Mac"
 sudo scutil --set HostName "Frankie's Mac"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Frankie's Mac"
@@ -12,7 +12,7 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 sudo nvram StartupMute=%01
 
 # Set DNS to Cloudflare (Wi-Fi)
-networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1
+networksetup -setdnsservers "Wi-Fi" 1.1.1.1 1.0.0.1
 #networksetup -setdnsservers Ethernet 1.1.1.1 1.0.0.1
 
 ##############################################################
@@ -46,9 +46,6 @@ networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1
 # in the login window
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
-# Never go into computer sleep mode
-sudo systemsetup -setcomputersleep Off > /dev/null
-
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
@@ -57,7 +54,6 @@ defaults write com.apple.finder WarnOnEmptyTrash -boolean false
 
 # Empty Trash securely by default
 defaults write com.apple.finder EmptyTrashSecurely -boolean true
-
 
 ##############################################################
 # Finder                                                           

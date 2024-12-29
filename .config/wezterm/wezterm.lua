@@ -5,9 +5,9 @@ local constants = require("constants")
 local config = wezterm.config_builder()
 
 -- Font settings
-config.font_size = 19
+config.font_size = 14
 config.line_height = 1.2
-config.font = wezterm.font("LigaSFMonoNerdFont-Medium")
+config.font = wezterm.font("Liga SFMono Nerd Font")
 
 -- Colors
 config.colors = {
