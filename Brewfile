@@ -64,8 +64,6 @@ brew "helm"
 brew "kompose"
 # Github Actions locally
 brew "act"
-# ghostty terminal (not a cask)
-brew "ghostty"
 
 # Font util
 brew "font-util"
@@ -125,7 +123,6 @@ cask "font-iosevka-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-lekton-nerd-font"
 cask "font-liberation-nerd-font"
-cask "font-meslo-lg-nerd-font"
 cask "font-monoid-nerd-font"
 cask "font-mononoki-nerd-font"
 cask "font-mplus-nerd-font"
@@ -151,6 +148,7 @@ cask "appcleaner"
 
 # Development tool casks
 cask "wezterm"
+cask "ghostty"
 cask "visual-studio-code"
 cask "cursor"
 cask "dbngin"

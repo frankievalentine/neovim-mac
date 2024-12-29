@@ -1,11 +1,5 @@
 #!/bin/sh
 
-# Ask for the administrator password upfront
-sudo -v
-
-# Keep-alive: update existing `sudo` time stamp until `osx.sh` has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
 ##############################################################
 # General System                                                       
 ##############################################################
@@ -168,15 +162,6 @@ defaults write com.apple.ActivityMonitor ShowCategory -int 0
 defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
-##############################################################
-# Mac App Store                                                            
-##############################################################
-
-# Enable the WebKit Developer Tools in the Mac App Store
-defaults write com.apple.appstore WebKitDeveloperExtras -boolean true
-
-# Enable Debug Menu in the Mac App Store
-defaults write com.apple.appstore ShowDebugMenu -boolean true
 
 ##############################################################
 # Kill affected applications                                                  
@@ -194,8 +179,8 @@ echo "Done. Note that some of these changes require a logout/restart to take eff
 echo ""
 echo "------------------------------"
 echo "Running brew bundle."
-echo ""
 echo "------------------------------"
+echo ""
 
 ##############################################################
 # Optional                                                
@@ -219,7 +204,7 @@ echo "------------------------------"
 # networksetup -setmanual "Ethernet" 192.168.2.100 255.255.255.0 192.168.2.1
 
 # Set the computer to sleep after 60 minutes
-#sudo systemsetup -setcomputersleep 60
+# sudo systemsetup -setcomputersleep 60
 
 # Add a Space to Dock
 # defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'

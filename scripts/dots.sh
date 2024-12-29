@@ -1,11 +1,5 @@
 #!/bin/sh
 
-# Ask for the administrator password upfront
-sudo -v
-
-# Keep-alive: update existing `sudo` time stamp until `full-setup.sh` has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
  # Run the mac script
 echo ""
 echo "------------------------------"
@@ -22,6 +16,11 @@ echo "------------------------------"
 echo "Executing"
 echo ""
 sh ~/dotfiles/scripts/mac.sh && brew bundle
+
+# Restart terminal session
+echo "------------------------------"
+echo ""
+exec -l $SHELL
 
  # Run the cli script
 echo ""
@@ -40,7 +39,12 @@ echo "Executing"
 echo ""
 sh ~/dotfiles/scripts/cli.sh
 
- # Create SSH key
+# Restart terminal session
+echo "------------------------------"
+echo ""
+exec -l $SHELL
+
+ # Create an SSH key
 echo ""
 echo "------------------------------"
 echo "Creating SSH key"
@@ -55,7 +59,7 @@ echo ""
 echo "------------------------------"
 echo "Executing"
 echo ""
-sh ~/dotfiles/scripts/mac.sh
+sh ~/dotfiles/scripts/ssh.sh
 
 # Restart terminal session
 echo "------------------------------"
