@@ -1,5 +1,12 @@
 source $HOME/.aliases
 
+# ohmyzsh
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="headline"
+export XDG_CONFIG_HOME=$HOME/.config
+
+source $ZSH/oh-my-zsh.sh
+
 # zsh-syntax-highlighting
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
