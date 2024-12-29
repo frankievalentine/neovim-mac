@@ -1,3 +1,11 @@
+# Taps
+# Note on Casks: Some casks may not be the most up to date version and may be broken
+tap 'homebrew/bundle'
+tap 'buo/cask-upgrade'
+tap 'mongodb/brew'
+tap 'oven-sh/bun'
+tap 'shaunsingh/SFMono-Nerd-Font-Ligaturized'
+
 # Install core utilities (those that come with OS X are outdated).
 brew "coreutils"
 
@@ -6,13 +14,6 @@ brew "moreutils"
 
 # Install `find`, `locate`, `updatedb`...
 brew "findutils"
-
-# Taps
-# Note on Casks: Some casks may not be the most up to date version and may be broken
-tap 'homebrew/bundle'
-tap 'mongodb/brew'
-tap 'buo/cask-upgrade'
-tap 'shaunsingh/SFMono-Nerd-Font-Ligaturized'
 
 # Install other necessary binaries.
 brew "grep"
@@ -30,6 +31,7 @@ brew "stow"
 brew "neovim"
 brew "fzf"
 brew "lazygit"
+brew "tmux"
 brew "btop"
 brew "bottom"
 brew "gdu"
@@ -49,14 +51,12 @@ brew "mkcert"
 brew "trash"
 brew "mas"
 brew "navi"
-brew "tmux"
-brew "flox"
 
 # Development binaries
 brew "deno"
-brew "oven-sh/bun/bun"
+brew "bun"
 brew "mysql-client"
-brew "mongodb-community@8.0"
+brew "mongodb-community"
 brew "cloudflared"
 # Kubernetes Package Manager
 brew "helm"

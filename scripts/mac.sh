@@ -10,9 +10,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # General System                                                       
 ##############################################################
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "Frankie's MacBook Pro"
-sudo scutil --set HostName "Frankie's MacBook Pro"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Frankie's MacBook Pro"
+sudo scutil --set ComputerName "Frankie's Mac"
+sudo scutil --set HostName "Frankie's Mac"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Frankie's Mac"
 
 # Disable startup chime
 sudo nvram StartupMute=%01
@@ -191,6 +191,11 @@ done
 echo ""
 echo ""
 echo "Done. Note that some of these changes require a logout/restart to take effect."
+echo ""
+echo "------------------------------"
+echo "Running brew bundle."
+echo ""
+echo "------------------------------"
 
 ##############################################################
 # Optional                                                

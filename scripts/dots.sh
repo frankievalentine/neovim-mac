@@ -9,56 +9,53 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
  # Run the mac script
 echo ""
 echo "------------------------------"
-echo "Setting up defaults"
+echo "Setting up defaults and executing Brewfile"
 echo "------------------------------"
 echo ""
 echo "------------------------------"
 echo "Making sure script is executable"
 echo "------------------------------"
 echo ""
-chmod +x ./scripts/mac.sh
+chmod +x ~/dotfiles/scripts/mac.sh
 echo ""
 echo "------------------------------"
 echo "Executing"
-echo "------------------------------"
 echo ""
-./scripts/mac.sh
+sh ~/dotfiles/scripts/mac.sh && brew bundle
 
  # Run the cli script
 echo ""
 echo "------------------------------"
-echo "Setting up Node, yarn, and executing Brewfile"
+echo "Setting up Corepack, fnm, and ohmyzsh"
 echo "------------------------------"
 echo ""
 echo "------------------------------"
 echo "Making sure script is executable"
 echo "------------------------------"
 echo ""
-chmod +x ./scripts/cli.sh
+chmod +x ~/dotfiles/scripts/cli.sh
 echo ""
 echo "------------------------------"
 echo "Executing"
-echo "------------------------------"
 echo ""
-./scripts/cli.sh && brew bundle
+sh ~/dotfiles/scripts/cli.sh
 
  # Create SSH key
 echo ""
 echo "------------------------------"
-echo "Creating SSH key and copying to Github"
+echo "Creating SSH key"
 echo "------------------------------"
 echo ""
 echo "------------------------------"
 echo "Making sure script is executable"
 echo "------------------------------"
 echo ""
-chmod +x ./scripts/ssh.sh
+chmod +x ~/dotfiles/scripts/ssh.sh
 echo ""
 echo "------------------------------"
 echo "Executing"
-echo "------------------------------"
 echo ""
-./scripts/ssh.sh
+sh ~/dotfiles/scripts/mac.sh
 
 # Restart terminal session
 echo "------------------------------"
