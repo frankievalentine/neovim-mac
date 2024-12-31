@@ -3,7 +3,7 @@
  # Run the mac script
 echo ""
 echo "------------------------------"
-echo "Setting up defaults and executing Brewfile"
+echo "Setting up system defaults and executing Brewfile"
 echo "------------------------------"
 echo ""
 echo "------------------------------"
@@ -44,7 +44,7 @@ echo "------------------------------"
 echo ""
 exec -l $SHELL
 
- # Create an SSH key
+# Create an SSH key
 echo ""
 echo "------------------------------"
 echo "Creating SSH key"
@@ -70,7 +70,7 @@ exec -l $SHELL
 echo "------------------------------"
 echo "------------------------------"
 echo ""
-echo "Completed running .dots!!! Restarting terminal session... and restart system to finish setup."
+echo "Completed running dots! Restarting terminal session. Be sure to also restart when possible."
 echo ""
 echo "------------------------------"
 echo "------------------------------"
