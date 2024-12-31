@@ -6,7 +6,7 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `osx.sh` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
- # Run the mac script
+# Run the mac script
 echo ""
 echo "------------------------------"
 echo "Setting up system defaults and executing Brewfile"
@@ -23,12 +23,7 @@ echo "Executing"
 echo ""
 sh ~/.dotfiles/scripts/mac.sh && brew bundle
 
-# Restart terminal session
-echo "------------------------------"
-echo ""
-exec $SHELL
-
- # Run the cli script
+# Run the cli script
 echo ""
 echo "------------------------------"
 echo "Setting up Corepack, fnm, and ohmyzsh"
@@ -44,11 +39,6 @@ echo "------------------------------"
 echo "Executing"
 echo ""
 sh ~/.dotfiles/scripts/cli.sh
-
-# Restart terminal session
-echo "------------------------------"
-echo ""
-exec $SHELL
 
 # Create an SSH key
 echo ""
@@ -66,11 +56,6 @@ echo "------------------------------"
 echo "Executing"
 echo ""
 sh ~/.dotfiles/scripts/ssh.sh
-
-# Restart terminal session
-echo "------------------------------"
-echo ""
-exec $SHELL
 
 # Finished
 echo "------------------------------"

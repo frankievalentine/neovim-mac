@@ -37,9 +37,16 @@ After backing up your Mac you may now follow these install instructions to setup
 6. Run the installation with:
 
    ```bash
-   sh ./scripts/dots.sh
+      sh ./scripts/dots.sh
    ```
 
-7. Restart your computer to finalize the process
+7. Add headline oh my zsh theme, remove oh my zsh generated .zshrc
+
+   ```bash
+      mv ~/.dotfiles/.oh-my-zsh/themes/headline.zsh-theme ~/.oh-my-zsh/themes
+      rm .zshrc
+      mv .zshrc-before-oh-my-zsh .zshrc
+   ```
+
 
 Your Mac is now ready to use!
