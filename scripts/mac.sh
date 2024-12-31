@@ -13,7 +13,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Set computer name (as done via System Settings → General → Sharing)
 sudo scutil --set ComputerName "Frankie's Mac"
 sudo scutil --set HostName "Frankie's Mac"
-sudo scutil --set LocalHostName "Frankie's-Mac.local"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Frankie's Mac"
 
 # Disable startup chime
@@ -29,7 +28,6 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw \
   --setblockall off \
   --setallowsigned on \
   --setallowsignedapp on \
-  --setloggingmode on \
   --setstealthmode on \
   --setglobalstate on
 

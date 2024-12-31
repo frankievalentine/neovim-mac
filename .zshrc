@@ -1,7 +1,5 @@
 source $HOME/.aliases
 
-export PATH="/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-
 # ohmyzsh
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="headline"
