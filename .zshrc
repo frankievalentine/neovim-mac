@@ -1,5 +1,7 @@
 source $HOME/.aliases
 
+export PATH="/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
 # ohmyzsh
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="headline"
@@ -12,15 +14,6 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # zsh-autosuggestions
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# brew sbin in PATH
-export PATH="/usr/local/sbin:$PATH"
-
-# brew libpq in PATH
-export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
-
-# brew in PATH
-export PATH="/opt/homebrew/bin:/bin:/usr/bin"
 
 # 1Password-cli shell completion
 eval "$(op completion zsh)"; compdef _op op

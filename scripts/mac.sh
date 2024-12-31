@@ -3,15 +3,17 @@
 # Ask for the administrator password upfront
 sudo -v
 
-# Keep-alive: update existing `sudo` time stamp until `osx.sh` has finished
+# Keep-alive: update existing `sudo` time stamp until `mac.sh` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ##############################################################
 # General System                                                       
 ##############################################################
+
 # Set computer name (as done via System Settings → General → Sharing)
 sudo scutil --set ComputerName "Frankie's Mac"
 sudo scutil --set HostName "Frankie's Mac"
+sudo scutil --set LocalHostName "Frankie's-Mac.local"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Frankie's Mac"
 
 # Disable startup chime
@@ -20,6 +22,16 @@ sudo nvram StartupMute=%01
 # Set DNS to Cloudflare (Wi-Fi)
 networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1
 #networksetup -setdnsservers Ethernet 1.1.1.1 1.0.0.1
+
+# Enable Firewall
+echo "Enable Firewall"
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw \
+  --setblockall off \
+  --setallowsigned on \
+  --setallowsignedapp on \
+  --setloggingmode on \
+  --setstealthmode on \
+  --setglobalstate on
 
 ##############################################################
 # General UI/UX                                                               
