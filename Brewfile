@@ -167,6 +167,7 @@ cask "utm"
 # Misc casks
 cask "1password"
 cask "1password-cli"
+cask "dropbox"
 cask "hiddenbar"
 cask "chatgpt"
 cask "itsycal"
