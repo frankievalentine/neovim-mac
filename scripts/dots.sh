@@ -1,5 +1,11 @@
 #!/bin/sh
 
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `osx.sh` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
  # Run the mac script
 echo ""
 echo "------------------------------"
@@ -10,17 +16,17 @@ echo "------------------------------"
 echo "Making sure script is executable"
 echo "------------------------------"
 echo ""
-chmod +x ~/dotfiles/scripts/mac.sh
+chmod +x ~/.dotfiles/scripts/mac.sh
 echo ""
 echo "------------------------------"
 echo "Executing"
 echo ""
-sh ~/dotfiles/scripts/mac.sh && brew bundle
+sh ~/.dotfiles/scripts/mac.sh && brew bundle
 
 # Restart terminal session
 echo "------------------------------"
 echo ""
-exec -l $SHELL
+exec $SHELL
 
  # Run the cli script
 echo ""
@@ -32,17 +38,17 @@ echo "------------------------------"
 echo "Making sure script is executable"
 echo "------------------------------"
 echo ""
-chmod +x ~/dotfiles/scripts/cli.sh
+chmod +x ~/.dotfiles/scripts/cli.sh
 echo ""
 echo "------------------------------"
 echo "Executing"
 echo ""
-sh ~/dotfiles/scripts/cli.sh
+sh ~/.dotfiles/scripts/cli.sh
 
 # Restart terminal session
 echo "------------------------------"
 echo ""
-exec -l $SHELL
+exec $SHELL
 
 # Create an SSH key
 echo ""
@@ -54,17 +60,17 @@ echo "------------------------------"
 echo "Making sure script is executable"
 echo "------------------------------"
 echo ""
-chmod +x ~/dotfiles/scripts/ssh.sh
+chmod +x ~/.dotfiles/scripts/ssh.sh
 echo ""
 echo "------------------------------"
 echo "Executing"
 echo ""
-sh ~/dotfiles/scripts/ssh.sh
+sh ~/.dotfiles/scripts/ssh.sh
 
 # Restart terminal session
 echo "------------------------------"
 echo ""
-exec -l $SHELL
+exec $SHELL
 
 # Finished
 echo "------------------------------"
@@ -78,4 +84,4 @@ echo "------------------------------"
 # Restart terminal session
 echo "------------------------------"
 echo ""
-exec -l $SHELL
+exec $SHELL

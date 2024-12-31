@@ -1,5 +1,11 @@
 #!/bin/sh
 
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `osx.sh` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 ##############################################################
 # General System                                                       
 ##############################################################
@@ -12,7 +18,7 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 sudo nvram StartupMute=%01
 
 # Set DNS to Cloudflare (Wi-Fi)
-networksetup -setdnsservers "Wi-Fi" 1.1.1.1 1.0.0.1
+networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1
 #networksetup -setdnsservers Ethernet 1.1.1.1 1.0.0.1
 
 ##############################################################

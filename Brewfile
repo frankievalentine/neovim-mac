@@ -3,8 +3,11 @@
 tap 'homebrew/bundle'
 tap 'buo/cask-upgrade'
 tap 'mongodb/brew'
-tap 'oven-sh/bun'
+tap 'oven-sh/bun/bun'
 tap 'shaunsingh/SFMono-Nerd-Font-Ligaturized'
+
+# Update brew after tap
+brew update
 
 # Install core utilities (those that come with OS X are outdated).
 brew "coreutils"
