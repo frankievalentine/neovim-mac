@@ -5,7 +5,7 @@ local constants = require("constants")
 local config = wezterm.config_builder()
 
 -- Font settings
-config.font_size = 17
+config.font_size = 16
 config.line_height = 1.2
 config.font = wezterm.font("Liga SFMono Nerd Font")
 
