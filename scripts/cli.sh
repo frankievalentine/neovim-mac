@@ -9,9 +9,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Install ohmyzsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
-# Install tpm
-git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
-
 # Install fnm node version manager
 brew install fnm
 eval "$(fnm env --use-on-cd)"
@@ -24,6 +21,9 @@ corepack install --global yarn@latest
 # yarn
 yarn exec env
 yarn set version stable
+
+# Install tpm
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
 # Source .zshrc
 source ~/.zshrc
