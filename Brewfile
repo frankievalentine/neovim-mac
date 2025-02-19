@@ -86,6 +86,7 @@ cask "font-league-gothic"
 cask "font-rambla"
 cask "font-share-tech"
 cask "font-ibm-plex-mono"
+cask "font-commit-mono"
 cask "font-sf-mono-nerd-font-ligaturized"
 cask "font-3270-nerd-font"
 cask "font-fira-mono-nerd-font"
@@ -173,6 +174,7 @@ cask "chatgpt"
 cask "itsycal"
 cask "notion"
 cask "slack"
+cask "neohtop"
 cask "zoom"
 cask "reminders-menubar"
 cask "discord"
@@ -190,9 +192,14 @@ cask "protonvpn"
 
 # Install Mac App Store apps (listed under your purchased apps in the App Store)
 # Search using 'mas search "APP NAME"'
-# mas "Slack", id: 803453959
 mas "Magnet", id: 441258766 # (Paid, Optional can use Raycast Window Management)
 mas "Klack", id: 6446206067 # (Paid, Optional)
 mas "Parcel", id: 639968404 # (Paid, Optional)
 mas "KeyStroke Pro", id: 1572206224 # (Paid, Optional)
 mas "Cursor Pro", id: 1447043133 # (Paid, Optional)
+
+# Optional casks
+# cask "herd" (Optional PHP tools) - prefer to run these tools in containers)
+# cask "hyper" (Optional)
+# cask "warp" (Optional)
+# cask "iterm2" (Optional)
