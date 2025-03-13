@@ -26,7 +26,6 @@ brew "zsh-syntax-highlighting"
 brew "zsh-autosuggestions"
 brew "bash"
 brew "bash-completion"
-brew "stow"
 brew "neovim"
 brew "fzf"
 brew "lazygit"
@@ -140,7 +139,7 @@ cask "font-ubuntu-nerd-font"
 cask "font-victor-mono-nerd-font"
 
 # Core casks
-cask "google-chrome"
+cask "brave-browser"
 cask "arc"
 cask "raycast"
 cask "stats"
@@ -150,7 +149,6 @@ cask "appcleaner"
 cask "wezterm"
 cask "ghostty"
 cask "visual-studio-code"
-cask "cursor"
 cask "dbngin"
 cask "github"
 cask "httpie"
@@ -170,11 +168,9 @@ cask "1password"
 cask "1password-cli"
 cask "dropbox"
 cask "hiddenbar"
-cask "chatgpt"
 cask "itsycal"
 cask "notion"
-cask "slack"
-cask "neohtop"
+
 cask "zoom"
 cask "reminders-menubar"
 cask "discord"
@@ -203,3 +199,7 @@ mas "Cursor Pro", id: 1447043133 # (Paid, Optional)
 # cask "hyper" (Optional)
 # cask "warp" (Optional)
 # cask "iterm2" (Optional)
+# cask "slack" (Optional)
+# cask "neohtop" (Optional)
+# cask "cursor" (Optional)
+# cask "chatgpt" (Optional)

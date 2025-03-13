@@ -21,6 +21,8 @@ After backing up your Mac you may now follow these install instructions to setup
       /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    ```
 
+   > 💡 Make sure to run the commands Homebrew provides after install.
+
 4. Install GNU stow using Homebrew.
 
    ```bash
@@ -45,7 +47,8 @@ After backing up your Mac you may now follow these install instructions to setup
    ```bash
       mv ~/.dotfiles/.oh-my-zsh/themes/headline.zsh-theme ~/.oh-my-zsh/themes
       rm .zshrc
-      mv .zshrc-before-oh-my-zsh .zshrc
+      mv .zshrc-pre-oh-my-zsh .zshrc
+      source .zshrc
    ```
 
 

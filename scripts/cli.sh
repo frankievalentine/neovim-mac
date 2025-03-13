@@ -7,12 +7,15 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Install ohmyzsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+zsh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # Install fnm node version manager
 brew install fnm
 eval "$(fnm env --use-on-cd)"
 fnm install --lts --corepack-enabled
+
+# Update npm
+npm install --global npm@latest
 
 # Update Corepack
 npm install --global corepack@latest
